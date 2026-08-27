@@ -20,13 +20,10 @@
 </head>
 <body class="bg-[#120F0D] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
-    <!-- Efek Cahaya / Glow Modern di Belakang -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#634832]/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
 
-    <!-- Container Utama -->
     <div class="max-w-md mx-auto px-6 py-10 w-full flex flex-col justify-center flex-grow relative z-10">
-        
-        <!-- Logo Header -->
+
         <div class="text-center mb-8 animate-fade-in-smooth delay-1">
             <a href="#" class="inline-flex w-12 h-12 rounded-full border border-[#4E413B] items-center justify-center bg-[#1A1512] mb-3 shadow-md">
                 <span class="text-sm">🥐</span>
@@ -35,7 +32,6 @@
             <p class="text-xs text-[#A89F95] mt-1">Buat akun untuk mulai menikmati koleksi artisan pastry eksklusif.</p>
         </div>
 
-        <!-- Card Form Sign-Up -->
         <main class="bg-[#1A1512] border border-[#2A231F] rounded-3xl p-8 shadow-2xl animate-fade-in-smooth delay-2">
             <form action="#" method="POST" class="space-y-4">
                 

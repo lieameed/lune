@@ -6,7 +6,6 @@
     <title>LUNE - About Us & Our Journey</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Efek Fade In & Slide Up yang Lembut & Mewah */
         @keyframes fadeInSlideSlow {
             0% {
                 opacity: 0;
@@ -32,13 +31,10 @@
 </head>
 <body class="bg-[#120F0D] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
-    <!-- Efek Cahaya / Glow Modern di Belakang -->
     <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#634832]/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
 
-    <!-- Container Utama -->
     <div class="max-w-6xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
         
-        <!-- Navbar -->
         <nav class="flex items-center justify-between py-2 mb-8 animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 rounded-full border border-[#4E413B] flex items-center justify-center bg-[#1A1512]">
@@ -65,7 +61,6 @@
             </div>
         </nav>
 
-        <!-- Header Section -->
         <header class="text-center mb-12 animate-fade-in-smooth delay-2">
             <span class="text-[11px] uppercase tracking-[0.3em] text-[#D4C5B9] bg-[#1A1512] border border-[#2A231F] px-4 py-1.5 rounded-full inline-block mb-4">
                 Our Story & Philosophy
@@ -78,10 +73,8 @@
             </p>
         </header>
 
-        <!-- Values / Pillars Section (Gambar diganti dengan proses & suasana dapur) -->
         <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
             
-            <!-- Card 1: Proses Membuat Adonan / Tangan Baker -->
             <div class="bg-[#1A1512] border border-[#2A231F] p-5 rounded-2xl flex flex-col justify-between hover:border-[#4E413B] transition shadow-lg animate-fade-in-smooth delay-2">
                 <div>
                     <div class="w-full h-40 rounded-xl overflow-hidden mb-4 bg-[#120F0D]">
@@ -94,7 +87,6 @@
                 </div>
             </div>
 
-            <!-- Card 2: Bahan Baku / Mentega Premium / Suasana Dapur -->
             <div class="bg-[#1A1512] border border-[#2A231F] p-5 rounded-2xl flex flex-col justify-between hover:border-[#4E413B] transition shadow-lg animate-fade-in-smooth delay-3">
                 <div>
                     <div class="w-full h-40 rounded-xl overflow-hidden mb-4 bg-[#120F0D]">
@@ -107,7 +99,6 @@
                 </div>
             </div>
 
-            <!-- Card 3: Suasana Toko / Chef di Dapur -->
             <div class="bg-[#1A1512] border border-[#2A231F] p-5 rounded-2xl flex flex-col justify-between hover:border-[#4E413B] transition shadow-lg animate-fade-in-smooth delay-4">
                 <div>
                     <div class="w-full h-40 rounded-xl overflow-hidden mb-4 bg-[#120F0D]">
@@ -122,7 +113,6 @@
 
         </section>
 
-        <!-- Timeline / The Journey -->
         <section class="mb-16 animate-fade-in-smooth delay-4">
             <div class="text-center mb-10">
                 <h2 class="text-2xl md:text-3xl font-light tracking-wide mb-2">The Journey of LUNE</h2>
@@ -131,7 +121,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
                 
-                <!-- Timeline Item 1 -->
                 <div class="bg-[#1A1512] border border-[#2A231F] p-5 rounded-2xl hover:border-[#4E413B] transition shadow-md">
                     <span class="text-xs font-semibold tracking-widest text-[#D4C5B9] block mb-2">2022</span>
                     <h4 class="text-sm font-medium text-[#F3EFEA] mb-1">A Humble Beginning</h4>
@@ -140,7 +129,6 @@
                     </p>
                 </div>
 
-                <!-- Timeline Item 2 -->
                 <div class="bg-[#1A1512] border border-[#2A231F] p-5 rounded-2xl hover:border-[#4E413B] transition shadow-md">
                     <span class="text-xs font-semibold tracking-widest text-[#D4C5B9] block mb-2">2024</span>
                     <h4 class="text-sm font-medium text-[#F3EFEA] mb-1">The First Boutique</h4>
@@ -149,7 +137,6 @@
                     </p>
                 </div>
 
-                <!-- Timeline Item 3 -->
                 <div class="bg-[#1A1512] border border-[#2A231F] p-5 rounded-2xl hover:border-[#4E413B] transition shadow-md">
                     <span class="text-xs font-semibold tracking-widest text-[#D4C5B9] block mb-2">2025</span>
                     <h4 class="text-sm font-medium text-[#F3EFEA] mb-1">Mastering Laminations</h4>
@@ -158,7 +145,7 @@
                     </p>
                 </div>
 
-                <!-- Timeline Item 4 -->
+
                 <div class="bg-[#1A1512] border border-[#2A231F] p-5 rounded-2xl hover:border-[#4E413B] transition shadow-md">
                     <span class="text-xs font-semibold tracking-widest text-[#D4C5B9] block mb-2">2026</span>
                     <h4 class="text-sm font-medium text-[#F3EFEA] mb-1">Serving 98K+ Patrons</h4>
@@ -170,7 +157,7 @@
             </div>
         </section>
 
-        <!-- Quote / Founder Note -->
+
         <section class="bg-[#1A1512] border border-[#2A231F] rounded-3xl p-8 md:p-12 text-center mb-6 relative overflow-hidden animate-fade-in-smooth delay-5 shadow-2xl">
             <div class="absolute -top-10 -right-10 w-40 h-40 bg-[#634832]/10 blur-3xl rounded-full pointer-events-none"></div>
             <span class="text-3xl text-[#D4C5B9] font-serif block mb-3">“</span>

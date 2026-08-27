@@ -6,7 +6,7 @@
     <title>LUNE - Add New Culinary Creation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Efek Fade In & Slide Up yang Lembut & Mewah */
+
         @keyframes fadeInSlideSlow {
             0% {
                 opacity: 0;
@@ -29,13 +29,10 @@
 </head>
 <body class="bg-[#120F0D] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
-    <!-- Efek Cahaya / Glow Modern di Belakang -->
     <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#634832]/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
 
-    <!-- Container Utama -->
     <div class="max-w-5xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
         
-        <!-- Navbar -->
         <nav class="flex items-center justify-between py-2 mb-6 animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 rounded-full border border-[#4E413B] flex items-center justify-center bg-[#1A1512]">
@@ -59,7 +56,6 @@
             </div>
         </nav>
 
-        <!-- Header Section -->
         <header class="mb-6 animate-fade-in-smooth delay-1">
             <h1 class="text-2xl md:text-3xl font-light tracking-wide text-[#F3EFEA] mb-1">
                 Add New Culinary Creation
@@ -69,20 +65,16 @@
             </p>
         </header>
 
-        <!-- Form Card Utama -->
         <main class="bg-[#1A1512] border border-[#2A231F] rounded-3xl p-6 md:p-8 shadow-2xl mb-8 animate-fade-in-smooth delay-2">
             <form action="#" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Kolom Kiri: Informasi Teks -->
                 <div class="flex flex-col space-y-5">
                     
-                    <!-- Recipe Name -->
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-[#D4C5B9] mb-2 font-medium">Recipe / Product Name</label>
                         <input type="text" placeholder="e.g. Valrhona Chocolate Croissant" class="w-full bg-[#120F0D] border border-[#2A231F] rounded-xl px-4 py-3 text-xs text-[#F3EFEA] placeholder-[#5C524A] focus:outline-none focus:border-[#4E413B] transition">
                     </div>
 
-                    <!-- Category Selector (Tambahan baru agar lebih fungsional) -->
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-[#D4C5B9] mb-2 font-medium">Category</label>
                         <select class="w-full bg-[#120F0D] border border-[#2A231F] rounded-xl px-4 py-3 text-xs text-[#F3EFEA] focus:outline-none focus:border-[#4E413B] transition">
@@ -93,7 +85,6 @@
                         </select>
                     </div>
 
-                    <!-- Price -->
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-[#D4C5B9] mb-2 font-medium">Price (USD / IDR)</label>
                         <input type="text" placeholder="e.g. $5.50" class="w-full bg-[#120F0D] border border-[#2A231F] rounded-xl px-4 py-3 text-xs text-[#F3EFEA] placeholder-[#5C524A] focus:outline-none focus:border-[#4E413B] transition">
@@ -101,16 +92,13 @@
 
                 </div>
 
-                <!-- Kolom Kanan: Deskripsi & Unggah Gambar -->
                 <div class="flex flex-col justify-between space-y-5">
-                    
-                    <!-- Description -->
+ 
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-[#D4C5B9] mb-2 font-medium">Description</label>
                         <textarea rows="3" placeholder="Tuliskan deskripsi rasa, bahan utama, atau keunggulan menu ini..." class="w-full bg-[#120F0D] border border-[#2A231F] rounded-xl px-4 py-3 text-xs text-[#F3EFEA] placeholder-[#5C524A] focus:outline-none focus:border-[#4E413B] transition resize-none"></textarea>
                     </div>
 
-                    <!-- Upload Box -->
                     <div>
                         <label class="block text-xs uppercase tracking-wider text-[#D4C5B9] mb-2 font-medium">Recipe Image</label>
                         <div class="w-full h-32 bg-[#120F0D] border-2 border-dashed border-[#2A231F] hover:border-[#4E413B] rounded-2xl flex flex-col items-center justify-center cursor-pointer transition group">
@@ -121,7 +109,6 @@
 
                 </div>
 
-                <!-- Tombol Aksi di Bagian Bawah Form -->
                 <div class="md:col-span-2 flex items-center justify-end space-x-4 pt-4 border-t border-[#2A231F]">
                     <a href="#" class="px-6 py-2.5 text-xs font-medium border border-[#4E413B] text-[#F3EFEA] rounded-full hover:bg-[#120F0D] transition">Cancel</a>
                     <button type="submit" class="px-7 py-2.5 bg-[#4E382A] hover:bg-[#5D4333] text-[#F3EFEA] text-xs uppercase tracking-wider rounded-full transition shadow-md">Publish Recipe</button>
