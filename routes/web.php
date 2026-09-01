@@ -9,5 +9,18 @@ Route::get('/', function () {
 
 Route::name('pages.')->prefix('pages')->group(function(){
 route::get('/', [RouteController::class, 'index']) -> name('index');
-route::get('/catalogue', [RouteController::class, 'catalog']) -> name('catalogue');
+route::get('/catalogue', [RouteController::class, 'catalogue']) -> name('catalogue');
 });
+
+Route::get('/login', function () {
+    return view('login');
+})->name('login');
+
+Route::get('/signup', function () {
+    return view('signup');
+})->name('signup');
+
+Route::get('/history', function () {
+    return view('history');
+})->name('history');
+

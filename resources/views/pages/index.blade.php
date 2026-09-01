@@ -55,8 +55,8 @@
             </div>
 
             <div class="flex items-center space-x-3">
-                <a href="#" class="px-5 py-2 text-xs font-medium bg-[#F3EFEA] text-[#120F0D] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
-                <a href="#" class="px-5 py-2 text-xs font-medium border border-[#4E413B] text-[#F3EFEA] rounded-full hover:bg-[#1C1714] transition">Sign-Up</a>
+                <a href="{{ route('login') }}" class="px-5 py-2 text-xs font-medium bg-[#F3EFEA] text-[#120F0D] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
+                <a href="{{ route('signup') }}" class="px-5 py-2 text-xs font-medium border border-[#4E413B] text-[#F3EFEA] rounded-full hover:bg-[#1C1714] transition">Sign-Up</a>
             </div>
         </nav>
 
