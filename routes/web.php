@@ -9,7 +9,7 @@ Route::get('/', function () {
 
 Route::name('pages.')->prefix('pages')->group(function(){
 route::get('/', [RouteController::class, 'index']) -> name('index');
-route::get('/catalogue', [RouteController::class, 'catalogue']) -> name('catalogue');
+route::get('/checkout', [RouteController::class, 'catalogue']) -> name('catalogue');
 });
 
 Route::get('/login', function () {
@@ -24,4 +24,3 @@ Route::get('/history', function () {
     return view('history');
 })->name('history');
 
-login,history,signup
