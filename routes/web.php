@@ -24,3 +24,4 @@ Route::get('/history', function () {
     return view('history');
 })->name('history');
 
+login,history,signup
