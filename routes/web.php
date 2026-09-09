@@ -16,3 +16,7 @@ Route::get('/detail', function () {
 Route::get('/foradmin', function () {
     return view('foradmin');
 });
+
+Route::get('/checkout', function () {
+    return view('checkout');
+});
