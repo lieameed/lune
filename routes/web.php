@@ -12,3 +12,7 @@ Route::get('/detail', function () {
 
     return view('detail', compact('product'));
 });
+
+Route::get('/foradmin', function () {
+    return view('foradmin');
+});
