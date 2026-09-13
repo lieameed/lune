@@ -106,7 +106,7 @@
                     </div>
                     <h3 class="text-sm md:text-base font-medium text-[#F3EFEA] mb-2">Baked Fresh Daily</h3>
                     <p class="text-xs text-[#A89F95] leading-relaxed">
-                        Tanpa bahan pengawet. Semua produk dipanggang setiap subuh agar sampai di tangan Anda dalam kondisi terbaiknya.
+                        Tanpa bahan penegawet. Semua produk dipanggang setiap subuh agar sampai di tangan Anda dalam kondisi terbaiknya.
                     </p>
                 </div>
             </div>
