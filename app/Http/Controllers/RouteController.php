@@ -11,6 +11,6 @@ class RouteController extends Controller
     }
 
     public function catalog(){
-        return view('pages.catalogue');
+        return view('pages.signup');
     }
 }
