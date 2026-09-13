@@ -1,58 +1,216 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Projek Web Lune Bakery 🥐
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+---
 
-## About Laravel
+# Installation Guide
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
-
-## Agentic Development
-
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+Clone repository ini:
 
 ```bash
-composer require laravel/boost --dev
+git clone https://github.com/lieameed/lune.git
 
-php artisan boost:install
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+Masuk ke direktori projek:
 
-## Contributing
+```bash
+cd lune
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```
 
-## Code of Conduct
+Install dependensi PHP & Node.js, lalu jalankan server:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+composer install
+npm install
+npm run dev
+php artisan serve
 
-## Security Vulnerabilities
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+# Installing The Database
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+* Buka `.env` dan atur konfigurasi database:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=lune
+DB_USERNAME=root
+DB_PASSWORD=
+
+```
+
+* Buat database bernama `lune` di PhpMyAdmin
+* Jalankan migrasi database:
+
+```bash
+php artisan migrate
+
+```
+
+---
+
+# Project Structure
+
+```bash
+LUNE/
+├── .agents/
+├── app/
+│   ├── Http/
+│   │   └── Controllers/
+│   │       ├── Controller.php
+│   │       └── RouteController.php
+│   ├── Models/
+│   │   └── User.php
+│   └── Providers/
+│       └── AppServiceProvider.php
+├── bootstrap/
+│   ├── cache/
+│   │   ├── .gitignore
+│   │   ├── packages.php
+│   │   └── services.php
+│   ├── app.php
+│   └── providers.php
+├── config/
+│   ├── app.php
+│   ├── auth.php
+│   ├── cache.php
+│   ├── database.php
+│   ├── filesystems.php
+│   ├── logging.php
+│   ├── mail.php
+│   ├── queue.php
+│   ├── services.php
+│   └── session.php
+├── database/
+├── node_modules/
+├── public/
+│   ├── build/
+│   ├── img/
+│   ├── .htaccess
+│   ├── favicon.ico
+│   ├── fonts-manifest.dev.json
+│   ├── hot
+│   ├── index.php
+│   └── robots.txt
+├── resources/
+│   ├── css/
+│   │   └── app.css
+│   ├── js/
+│   │   └── app.js
+│   └── views/
+│       ├── anotherpage/
+│       ├── pages/
+│       │   ├── about-us.blade.php
+│       │   ├── add.blade.php
+│       │   ├── cart.blade.php
+│       │   ├── catalogue.blade.php
+│       │   ├── check-out.blade.php
+│       │   ├── detail.blade.php
+│       │   ├── history.blade.php
+│       │   ├── index.blade.php
+│       │   ├── login.blade.php
+│       │   ├── reserve.blade.php
+│       │   └── sign-up.blade.php
+│       └── welcome.blade.php
+├── routes/
+│   ├── console.php
+│   └── web.php
+├── storage/
+│   ├── app/
+│   ├── framework/
+│   └── logs/
+├── tests/
+├── vendor/
+├── .editorconfig
+├── .env
+├── .env.example
+├── .gitattributes
+├── .gitignore
+├── .npmrc
+├── AGENTS.md
+├── artisan
+├── boost.json
+├── composer.json
+├── composer.lock
+├── package-lock.json
+├── package.json
+├── phpunit.xml
+├── README.md
+└── vite.config.js
+
+```
+
+# Key Features ✨
+
+* **Secure User Authentication:** Fitur registrasi dan login pelanggan untuk melacak riwayat pemesanan dan reservasi.
+* **Artisan Bakery Catalogue:** Tampilan katalog produk roti, kue, pastry, dan minuman yang rapi serta responsif.
+* **Reservation System:** Fitur reservasi meja atau pesanan khusus langsung dari aplikasi web.
+* **Interactive Shopping Cart & Checkout:** Alur keranjang belanja dan checkout yang mulus untuk pemesanan produk secara langsung.
+* **Order History:** Melacak status riwayat pesanan yang telah dilakukan pengguna.
+
+---
+
+# System Flow (Alur Sistem) 🔄
+
+1. **Authentication Phase**
+* **Pengguna Baru:** Mengakses halaman `sign-up.blade.php` untuk mendaftarkan akun baru.
+* **Pengguna Terdaftar:** Masuk melalui `login.blade.php` untuk mengakses fitur keranjang, reservasi, dan riwayat pesanan.
+
+
+2. **Exploring Bakery Catalogue**
+* Pengguna dapat menjelajahi halaman katalog (`catalogue.blade.php`) atau halaman utama (`index.blade.php`) untuk melihat varian roti dan pastry.
+* Melihat detail produk beserta harga dan deskripsi pada `detail.blade.php`.
+
+
+3. **Ordering & Reservation Process**
+* **Pemesanan:** Memasukkan menu pilihan ke keranjang belanja (`cart.blade.php`) dan melanjutkan ke tahap pembayaran di `check-out.blade.php`.
+* **Reservasi:** Melakukan pemesanan tempat atau tanggal khusus melalui halaman reservasi (`reserve.blade.php`).
+
+
+4. **Order History**
+* Pengguna dapat melihat daftar transaksi dan pemesanan yang pernah dilakukan pada halaman `history.blade.php`.
+
+
+
+---
+
+# Coding Languages & Tools 🌐 🔥 🥶
+
+---
+
+# Contributing
+
+Kami menerima kontribusi untuk perbaikan bug, pengembangan fitur baru, maupun peningkatan antarmuka (UI/UX) projek Lune Bakery.
+
+Cara Berkontribusi 🥐 👇 :
+
+* Fork repository ini.
+* Buat branch baru untuk fitur atau perbaikan bug kamu.
+* Commit perubahan dengan pesan yang jelas.
+* Push ke branch tersebut dan buat Pull Request.
+* Tunggu review sebelum dimerge.
+
+### Contribution Guidelines
+
+* Tulis kode yang bersih dan mudah dirawat.
+* Berikan dokumentasi singkat jika ada penambahan rute atau fitur baru.
+* Jaga komunikasi yang sopan dan kolaboratif.
+
+---
+
+# License
+
+Project ini dilindungi di bawah lisensi MIT License.
+Bebas digunakan, dimodifikasi, dan didistribusikan kembali dengan mencantumkan kredit.
+
+---
+
+# Group Members
+1. Marvin Alfredo
+2. Michael Leonardo
+3. Venan Sebastian Budianto
