@@ -29,7 +29,7 @@
         .delay-5 { animation-delay: 0.7s; }
     </style>
 </head>
-<body class="bg-[#120F0D] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
+<body class="bg-[#1C1613] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
     <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#634832]/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
 
@@ -38,7 +38,7 @@
         <nav class="flex items-center justify-between py-2 mb-8 animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 rounded-full border border-[#4E413B] flex items-center justify-center bg-[#1A1512]">
-                    <span class="text-xs">🥐</span>
+                    <span class="text-xs"></span>
                 </div>
                 <span class="font-light tracking-widest text-sm uppercase">LUNE</span>
             </div>
