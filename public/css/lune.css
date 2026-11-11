@@ -1,0 +1,120 @@
+:root {
+    color-scheme: dark;
+    --lune-background: #191512;
+    --lune-surface: #211b17;
+    --lune-border: #382d26;
+    --lune-text: #f3e8d3;
+    --lune-muted: #aa9b8e;
+    --lune-accent: #76563f;
+}
+
+.lune-page {
+    background: var(--lune-background);
+    color: var(--lune-text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.lune-page .lune-shell {
+    width: 100%;
+    max-width: 72rem;
+}
+
+.lune-page .lune-nav {
+    min-height: 4.5rem;
+    gap: 1rem;
+    padding-block: 0.8rem;
+    margin-bottom: clamp(1.75rem, 4vw, 3rem);
+    border-bottom: 1px solid var(--lune-border);
+}
+
+.lune-page .lune-nav > div:nth-child(2) {
+    align-items: center;
+    gap: 1.25rem;
+    font-size: 0.8125rem;
+}
+
+.lune-page .lune-nav > div:nth-child(2) span {
+    display: none;
+}
+
+.lune-page .lune-nav > div:nth-child(2) a {
+    color: var(--lune-muted);
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+
+.lune-page .lune-nav > div:nth-child(2) a:hover,
+.lune-page .lune-nav > div:nth-child(2) a.text-white {
+    color: var(--lune-text);
+}
+
+.lune-page .lune-nav > div:last-child {
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.lune-page .lune-nav > div:last-child > a,
+.lune-page .lune-nav > div:last-child > form > button {
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: none;
+    transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+.lune-page .lune-title {
+    margin-bottom: 0.75rem;
+    color: var(--lune-text);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.85rem, 3vw, 2.4rem);
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    line-height: 1.15;
+}
+
+.lune-page .lune-hero-title {
+    font-size: clamp(2.15rem, 4vw, 3.25rem);
+    line-height: 1.08;
+}
+
+.lune-page .lune-nav,
+.lune-page main > [class*="rounded-2xl"],
+.lune-page main > [class*="rounded-3xl"] {
+    border-color: var(--lune-border);
+}
+
+.lune-page main > [class*="rounded-2xl"],
+.lune-page main > [class*="rounded-3xl"] {
+    box-shadow: 0 12px 32px rgb(0 0 0 / 0.16);
+}
+
+.lune-page .pointer-events-none,
+.lune-page [class*="blur-"] {
+    display: none;
+}
+
+.lune-page .animate-fade-in-smooth {
+    animation: none;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .lune-page .lune-nav {
+        justify-content: space-between;
+    }
+
+    .lune-page .lune-nav > div:nth-child(2) {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .lune-page *,
+    .lune-page *::before,
+    .lune-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

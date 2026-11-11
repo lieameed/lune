@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUNE - Homepage</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/lune.css') }}">
     <style>
         @keyframes fadeInSlideSlow {
             0% {
@@ -26,16 +27,16 @@
         .delay-4 { animation-delay: 0.55s; }
     </style>
 </head>
-<body class="bg-[#171412] text-[#E8DCC4] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
+<body class="lune-page bg-[#171412] text-[#E8DCC4] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
     <div class="absolute top-12 left-1/2 -translate-x-1/2 w-[500px] h-[220px] bg-[#634832]/20 blur-[120px] rounded-full pointer-events-none -z-10"></div>
 
-    <div class="max-w-5xl mx-auto px-6 py-5 w-full flex flex-col justify-between flex-grow relative z-10">
+    <div class="lune-shell max-w-5xl mx-auto px-6 py-5 w-full flex flex-col justify-between flex-grow relative z-10">
         
-        <nav class="flex items-center justify-between py-2 animate-fade-in-smooth delay-1">
+        <nav class="lune-nav flex items-center justify-between py-2 animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 rounded-full border border-[#4E382A] flex items-center justify-center bg-[#201B18]">
-                    <span class="text-xs"></span>
+                    <span class="text-xs">L</span>
                 </div>
             </div>
 
@@ -52,14 +53,22 @@
             </div>
 
             <div class="flex items-center space-x-3">
-                <a href="#" class="px-5 py-2 text-xs font-medium bg-[#E8DCC4] text-[#171412] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
-                <a href="#" class="px-5 py-2 text-xs font-medium border border-[#4E382A] bg-[#3B2D25] text-[#E8DCC4] rounded-full hover:bg-[#4E382A] transition">Sign-Up</a>
+                @auth
+                    <span class="text-xs text-[#A89F95]">Halo, {{ auth()->user()->name }}</span>
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit" class="px-5 py-2 text-xs font-medium border border-[#4E382A] bg-[#3B2D25] text-[#E8DCC4] rounded-full hover:bg-[#4E382A] transition">Log-Out</button>
+                    </form>
+                @else
+                    <a href="{{ route('pages.login') }}" class="px-5 py-2 text-xs font-medium bg-[#E8DCC4] text-[#171412] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
+                    <a href="{{ route('pages.signup') }}" class="px-5 py-2 text-xs font-medium border border-[#4E382A] bg-[#3B2D25] text-[#E8DCC4] rounded-full hover:bg-[#4E382A] transition">Sign-Up</a>
+                @endauth
             </div>
         </nav>
 
         <header class="text-center my-3 animate-fade-in-smooth delay-2">
             <p class="text-[10px] uppercase tracking-[0.3em] text-[#A89F95] mb-2 font-medium">Est. 2026 • Freshly Baked</p>
-            <h1 class="text-3xl md:text-5xl font-serif tracking-wide leading-[1.15] mb-3 text-[#E8DCC4] max-w-3xl mx-auto">
+            <h1 class="lune-title lune-hero-title text-3xl md:text-5xl font-serif tracking-wide leading-[1.15] mb-3 text-[#E8DCC4] max-w-3xl mx-auto">
                 LUXURY CROISSANTS, ARTISANALLY CRAFTED.
             </h1>
             <p class="text-xs md:text-sm text-[#A89F95] max-w-xl mx-auto leading-relaxed">

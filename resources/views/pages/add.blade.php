@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUNE - Add New Culinary Creation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/lune.css') }}">
     <style>
 
         @keyframes fadeInSlideSlow {
@@ -27,16 +28,16 @@
         .delay-2 { animation-delay: 0.25s; }
     </style>
 </head>
-<body class="bg-[#1C1613] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
+<body class="lune-page bg-[#1C1613] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
     <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#634832]/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
 
-    <div class="max-w-5xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
+    <div class="lune-shell max-w-5xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
         
-        <nav class="flex items-center justify-between py-2 mb-6 animate-fade-in-smooth delay-1">
+        <nav class="lune-nav flex items-center justify-between py-2 mb-6 animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 rounded-full border border-[#4E413B] flex items-center justify-center bg-[#1A1512]">
-                    <span class="text-xs"></span>
+                    <span class="text-xs">L</span>
                 </div>
                 <span class="font-light tracking-widest text-sm uppercase">LUNE Admin</span>
             </div>
@@ -57,7 +58,7 @@
         </nav>
 
         <header class="mb-6 animate-fade-in-smooth delay-1">
-            <h1 class="text-2xl md:text-3xl font-light tracking-wide text-[#F3EFEA] mb-1">
+            <h1 class="lune-title text-2xl md:text-3xl font-light tracking-wide text-[#F3EFEA] mb-1">
                 Add New Culinary Creation
             </h1>
             <p class="text-xs text-[#A89F95]">

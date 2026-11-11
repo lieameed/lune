@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUNE - About Us & Our Journey</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/lune.css') }}">
     <style>
         @keyframes fadeInSlideSlow {
             0% {
@@ -29,16 +30,16 @@
         .delay-5 { animation-delay: 0.7s; }
     </style>
 </head>
-<body class="bg-[#1C1613] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
+<body class="lune-page bg-[#1C1613] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
     <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#634832]/15 blur-[140px] rounded-full pointer-events-none -z-10"></div>
 
-    <div class="max-w-6xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
+    <div class="lune-shell max-w-6xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
         
-        <nav class="flex items-center justify-between py-2 mb-8 animate-fade-in-smooth delay-1">
+        <nav class="lune-nav flex items-center justify-between py-2 mb-8 animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-2">
                 <div class="w-10 h-10 rounded-full border border-[#4E413B] flex items-center justify-center bg-[#1A1512]">
-                    <span class="text-xs"></span>
+                    <span class="text-xs">L</span>
                 </div>
                 <span class="font-light tracking-widest text-sm uppercase">LUNE</span>
             </div>
@@ -56,8 +57,8 @@
             </div>
 
             <div class="flex items-center space-x-3">
-                <a href="#" class="px-5 py-2 text-xs font-medium bg-[#F3EFEA] text-[#120F0D] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
-                <a href="#" class="px-5 py-2 text-xs font-medium border border-[#4E413B] text-[#F3EFEA] rounded-full hover:bg-[#1C1714] transition">Sign-Up</a>
+                <a href="{{ route('pages.login') }}" class="px-5 py-2 text-xs font-medium bg-[#F3EFEA] text-[#120F0D] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
+                <a href="{{ route('pages.signup') }}" class="px-5 py-2 text-xs font-medium border border-[#4E413B] text-[#F3EFEA] rounded-full hover:bg-[#1C1714] transition">Sign-Up</a>
             </div>
         </nav>
 
@@ -65,7 +66,7 @@
             <span class="text-[11px] uppercase tracking-[0.3em] text-[#D4C5B9] bg-[#1A1512] border border-[#2A231F] px-4 py-1.5 rounded-full inline-block mb-4">
                 Our Story & Philosophy
             </span>
-            <h1 class="text-3xl md:text-5xl font-light tracking-wide leading-tight mb-4">
+            <h1 class="lune-title text-3xl md:text-5xl font-light tracking-wide leading-tight mb-4">
                 Crafting Excellence in <br><span class="italic font-normal">Every Single Layer</span>
             </h1>
             <p class="text-xs md:text-sm text-[#A89F95] max-w-xl mx-auto leading-relaxed">

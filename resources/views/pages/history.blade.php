@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUNE - Your Order History</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/lune.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         body {
@@ -33,17 +34,17 @@
         .delay-4 { animation-delay: 0.4s; }
     </style>
 </head>
-<body class="bg-[#120F0D] text-[#F3EFEA] antialiased min-h-screen flex flex-col selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
+<body class="lune-page bg-[#120F0D] text-[#F3EFEA] antialiased min-h-screen flex flex-col selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
     <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-[#634832]/5 blur-[120px] rounded-full pointer-events-none -z-10 border border-white/5"></div>
     <div class="absolute top-20 left-10 w-[800px] h-[800px] rounded-full border border-[#2A231F]/30 pointer-events-none -z-10"></div>
 
-    <div class="max-w-4xl mx-auto px-6 py-8 w-full flex flex-col flex-grow relative z-10">
+    <div class="lune-shell max-w-4xl mx-auto px-6 py-8 w-full flex flex-col flex-grow relative z-10">
         
-        <nav class="flex items-center justify-between py-2 mb-16 animate-fade-in-smooth delay-1">
+        <nav class="lune-nav flex items-center justify-between py-2 mb-16 animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-3">
                 <div class="w-11 h-11 rounded-full border border-[#4E413B] flex items-center justify-center bg-[#1A1512] shadow-lg">
-                    <span class="text-sm"></span>
+                    <span class="text-sm">L</span>
                 </div>
             </div>
 
@@ -60,13 +61,13 @@
             </div>
 
             <div class="flex items-center space-x-4">
-                <a href="#" class="px-5 py-2 text-xs font-medium bg-[#E8DCC4] text-[#171412] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
-                <a href="#" class="px-5 py-2 text-xs font-medium border border-[#4E382A] bg-[#3B2D25] text-[#E8DCC4] rounded-full hover:bg-[#4E382A] transition">Sign-Up</a>
+                <a href="{{ route('pages.login') }}" class="px-5 py-2 text-xs font-medium bg-[#E8DCC4] text-[#171412] rounded-full hover:bg-white transition shadow-sm">Log-In</a>
+                <a href="{{ route('pages.signup') }}" class="px-5 py-2 text-xs font-medium border border-[#4E382A] bg-[#3B2D25] text-[#E8DCC4] rounded-full hover:bg-[#4E382A] transition">Sign-Up</a>
             </div>
         </nav>
 
         <header class="mb-10 animate-fade-in-smooth delay-2">
-            <h1 class="text-4xl md:text-5xl font-light tracking-wide mb-3">
+            <h1 class="lune-title text-4xl md:text-5xl font-light tracking-wide mb-3">
                 Your Order History
             </h1>
             <p class="text-sm text-[#A89F95] font-light">

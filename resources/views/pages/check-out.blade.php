@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUNE - Checkout</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/lune.css') }}">
     <style>
         @keyframes fadeInSlideSlow {
             0% { opacity: 0; transform: translateY(15px); }
@@ -18,14 +19,14 @@
         .delay-2 { animation-delay: 0.2s; }
     </style>
 </head>
-<body class="bg-[#171412] text-[#E8DCC4] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
+<body class="lune-page bg-[#171412] text-[#E8DCC4] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#4E382A] selection:text-white relative overflow-x-hidden">
 
-    <div class="max-w-5xl mx-auto px-6 py-8 w-full flex flex-col justify-between flex-grow relative z-10">
+    <div class="lune-shell max-w-5xl mx-auto px-6 py-8 w-full flex flex-col justify-between flex-grow relative z-10">
         
-        <nav class="flex items-center justify-between pb-6 mb-8 border-b border-[#2C2420] animate-fade-in-smooth delay-1">
+        <nav class="lune-nav flex items-center justify-between pb-6 mb-8 border-b border-[#2C2420] animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-full border border-[#4E382A] flex items-center justify-center bg-[#201B18]">
-                    <span class="text-sm"></span>
+                    <span class="text-sm">L</span>
                 </div>
             </div>
 
@@ -42,13 +43,13 @@
             </div>
 
             <div class="flex items-center space-x-2">
-                <a href="#" class="px-4 py-1.5 bg-[#E8DCC4] text-[#171412] text-xs font-medium rounded-lg hover:bg-white transition">Log-In</a>
-                <a href="#" class="px-4 py-1.5 bg-[#3B2D25] text-[#E8DCC4] text-xs font-medium rounded-lg border border-[#4E382A] hover:bg-[#4E382A] transition">Sign-Up</a>
+                <a href="{{ route('pages.login') }}" class="px-4 py-1.5 bg-[#E8DCC4] text-[#171412] text-xs font-medium rounded-lg hover:bg-white transition">Log-In</a>
+                <a href="{{ route('pages.signup') }}" class="px-4 py-1.5 bg-[#3B2D25] text-[#E8DCC4] text-xs font-medium rounded-lg border border-[#4E382A] hover:bg-[#4E382A] transition">Sign-Up</a>
             </div>
         </nav>
 
         <header class="mb-8 animate-fade-in-smooth delay-1">
-            <h1 class="text-2xl md:text-3xl font-light tracking-wide text-[#E8DCC4] mb-1 font-serif">
+            <h1 class="lune-title text-2xl md:text-3xl font-light tracking-wide text-[#E8DCC4] mb-1 font-serif">
                 Complete Your Order
             </h1>
         </header>

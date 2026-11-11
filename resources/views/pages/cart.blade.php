@@ -5,36 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Cart - Lune Bakery</title>
 
-    <!-- Import Font Montserrat Alternates dari Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
     <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/lune.css') }}">
 
-    <!-- Set Font global -->
     <style>
-        * {
-            font-family: 'Montserrat Alternates', sans-serif !important;
-        }
-        
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #1C1816; }
         ::-webkit-scrollbar-thumb { background: #3D332D; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #5C504A; }
     </style>
 </head>
-<body class="bg-[#1C1816] text-[#E8D8CE] antialiased">
+<body class="lune-page bg-[#1C1816] text-[#E8D8CE] antialiased">
 
     <!-- Container Utama -->
-    <div class="max-w-7xl mx-auto px-6 py-8">
+    <div class="lune-shell max-w-7xl mx-auto px-6 py-8">
 
         <!-- HEADER / NAVBAR -->
-        <nav class="flex justify-between items-center mb-10 border-b border-[#3A302B] pb-6">
+        <nav class="lune-nav flex justify-between items-center mb-10 border-b border-[#3A302B] pb-6">
             <div class="flex items-center gap-2">
                 <div class="w-12 h-12 rounded-full border border-[#D5C5B5] flex items-center justify-center">
-                    <span class="text-xl">🥐</span>
+                    <span class="text-xl">L</span>
                 </div>
             </div>
             
@@ -47,14 +38,14 @@
             </div>
 
             <div class="flex gap-4">
-                <button class="bg-[#EBE2D5] text-[#1C1816] px-6 py-2 rounded-md font-semibold text-sm">Log-In</button>
-                <button class="bg-[#5C4535] text-[#EBE2D5] px-6 py-2 rounded-md font-semibold text-sm">Sign-Up</button>
+                <a href="{{ route('pages.login') }}" class="bg-[#EBE2D5] text-[#1C1816] px-6 py-2 rounded-md font-semibold text-sm">Log-In</a>
+                <a href="{{ route('pages.signup') }}" class="bg-[#5C4535] text-[#EBE2D5] px-6 py-2 rounded-md font-semibold text-sm">Sign-Up</a>
             </div>
         </nav>
 
         <!-- Title & Select All -->
         <div class="mb-8 border-b border-[#3A302B] pb-4">
-            <h1 class="text-3xl font-semibold mb-4">Your Cart</h1>
+            <h1 class="lune-title text-3xl font-semibold mb-4">Your Cart</h1>
             <label class="flex items-center gap-3 cursor-pointer text-[#A89F98] hover:text-[#E8D8CE] transition w-max">
                 <input type="checkbox" class="w-5 h-5 accent-[#D5C5B5] bg-[#1E1917] border-[#3D332D] rounded cursor-pointer">
                 <span>Select All</span>

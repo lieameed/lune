@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LUNE - Product Detail</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ asset('css/lune.css') }}">
     <style>
         @keyframes fadeInSlideSlow {
             0% { opacity: 0; transform: translateY(15px); }
@@ -18,17 +19,17 @@
         .delay-2 { animation-delay: 0.2s; }
     </style>
 </head>
-<body class="bg-[#1C1613] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#6A4A3A] selection:text-white relative overflow-x-hidden">
+<body class="lune-page bg-[#1C1613] text-[#F3EFEA] font-sans antialiased min-h-screen flex flex-col justify-between selection:bg-[#6A4A3A] selection:text-white relative overflow-x-hidden">
 
     <div class="absolute top-10 left-10 w-[400px] h-[400px] border border-[#2D231E]/20 rounded-full pointer-events-none -z-10"></div>
     <div class="absolute bottom-10 right-10 w-[600px] h-[600px] border border-[#2D231E]/20 rounded-full pointer-events-none -z-10"></div>
 
-    <div class="max-w-6xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
+    <div class="lune-shell max-w-6xl mx-auto px-6 py-6 w-full flex flex-col justify-between flex-grow relative z-10">
 
-        <nav class="flex items-center justify-between pb-4 mb-8 border-b border-[#2D231E] animate-fade-in-smooth delay-1">
+        <nav class="lune-nav flex items-center justify-between pb-4 mb-8 border-b border-[#2D231E] animate-fade-in-smooth delay-1">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-full border border-[#3D302A] flex items-center justify-center bg-[#241C18]">
-                    <span class="text-sm"></span>
+                    <span class="text-sm">L</span>
                 </div>
             </div>
 
@@ -45,8 +46,8 @@
             </div>
 
             <div class="flex items-center space-x-2">
-                <a href="#" class="px-5 py-2 bg-[#EFECE6] text-[#1C1613] text-xs font-medium rounded-full hover:bg-white transition shadow-sm">Log-in</a>
-                <a href="#" class="px-5 py-2 bg-[#3A2E28] text-[#EFECE6] text-xs font-medium rounded-full border border-[#4D3E36] hover:bg-[#4D3E36] transition">Sign-Up</a>
+                <a href="{{ route('pages.login') }}" class="px-5 py-2 bg-[#EFECE6] text-[#1C1613] text-xs font-medium rounded-full hover:bg-white transition shadow-sm">Log-in</a>
+                <a href="{{ route('pages.signup') }}" class="px-5 py-2 bg-[#3A2E28] text-[#EFECE6] text-xs font-medium rounded-full border border-[#4D3E36] hover:bg-[#4D3E36] transition">Sign-Up</a>
             </div>
         </nav>
 
@@ -61,7 +62,7 @@
             <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
                 <div>
                     <div class="flex justify-between items-start mb-3">
-                        <h1 class="text-2xl md:text-3xl font-bold font-serif text-white tracking-wide leading-snug">
+                        <h1 class="lune-title text-2xl md:text-3xl font-bold font-serif text-white tracking-wide leading-snug">
                             Flaky Toasted<br>Almond Croissant
                         </h1>
                         <span class="text-xl md:text-2xl font-bold text-white">$6.99</span>
